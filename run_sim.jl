@@ -1,15 +1,17 @@
 # Run files to perform one simulation.
 
 # include functions
+include("set_up.jl")
+include("set_up_sim.jl")
 include("dist_o_i.jl")
 include("calc_net.jl")
 include("update_w.jl")
-include("set_up_sim.jl")
+
 include("simulation.jl")
 
 # set up
 # (what is the best way to make these local variables to improve speed?)
-include("set_up.jl")
+
 v1 = [-3 0.5 0.5]
 
 # run simulation within context of other (omitted) code until termination

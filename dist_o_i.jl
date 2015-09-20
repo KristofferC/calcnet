@@ -1,8 +1,8 @@
 # For a given i, determine distribution of o.
 
-function dist_o_i( signal::Float64, dist::Dict )
+function dist_o_i( signal::Float64, dist::Dist )
 
-  o_vec = dist["Prob_o"][1,:]
+  o_vec = dist.prob_o[1,:]
 
   # create simple distribution
   Prob_o_i = zeros(1, length(o_vec))
